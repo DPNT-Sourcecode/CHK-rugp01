@@ -31,5 +31,8 @@ class TestCheckout:
         assert market.checkout("EEBB") == 110
 
     def test_F_offer(self):
-        pass
+        market = CheckoutSolution()
+        assert market.checkout("FFF") == 20
+        assert market.checkout("FF") == 20
+
 

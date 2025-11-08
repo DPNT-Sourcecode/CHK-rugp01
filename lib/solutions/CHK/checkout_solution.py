@@ -26,6 +26,7 @@ class CheckoutSolution:
 
         special_offers = {
             "E": {"buy_quantity": 2, "free_item": "B", "free_quantity": 1},
+            "F": {"buy_quantity": 2, "free_item": "F", "free_quantity": 1},
         }
 
         for item in skus:
@@ -59,4 +60,5 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("AAAAAAA"))
+
 
