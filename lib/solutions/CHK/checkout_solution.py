@@ -17,6 +17,7 @@ class CheckoutSolution:
             'C': 20,
             'D': 15,
             'E': 40,
+            'F': 10,
         }
         offers = {
             'A': [(5, 200),(3, 130)],
@@ -58,3 +59,4 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("AAAAAAA"))
+

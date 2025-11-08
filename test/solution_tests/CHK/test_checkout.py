@@ -10,8 +10,9 @@ class TestCheckout:
         assert market.checkout("C") == 20
         assert market.checkout("D") == 15
         assert market.checkout("E") == 40
+        assert market.checkout("F") == 10
 
-    def test_mixed_items(self):
+    def test_mixed_item_offers(self):
         market = CheckoutSolution()
         assert market.checkout("ABCDABA") == 210
         assert market.checkout("AAAAA") == 200
@@ -24,7 +25,11 @@ class TestCheckout:
         assert market.checkout(123) == -1
         assert market.checkout(["A", "B"]) == -1
 
-    def test_E_gives_B_free(self):
+    def test_E_offer(self):
         market = CheckoutSolution()
         assert market.checkout("EEB") == 80
         assert market.checkout("EEBB") == 110
+
+    def test_F_offer(self):
+        pass
+
