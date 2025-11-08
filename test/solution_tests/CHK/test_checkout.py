@@ -24,6 +24,3 @@ class TestCheckout:
         assert market.checkout(float) == -1
         assert market.checkout(123) == -1
         assert market.checkout(["A", "B"]) == -1
-
-
-
