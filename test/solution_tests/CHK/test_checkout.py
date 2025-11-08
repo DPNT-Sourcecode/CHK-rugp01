@@ -55,6 +55,20 @@ class TestCheckout:
 
     def test_R_offer(self):
         market = CheckoutSolution()
+        assert market.checkout("RRRQ") == 150
+        assert market.checkout("RRRQQ") == 180
+
+    def test_U_offer(self):
+        market = CheckoutSolution()
+        assert market.checkout("UUU") == 120
+        assert market.checkout("UUUU") == 120
+        assert market.checkout("UUUUU") == 160
+
+    def test_V_offers(self):
+        market = CheckoutSolution()
+        assert market.checkout("VV") == 90
+        assert market.checkout("VVV") == 130
+        assert market.checkout("VVVVV") == 220
 
 
 
