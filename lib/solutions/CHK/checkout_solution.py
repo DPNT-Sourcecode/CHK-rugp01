@@ -50,7 +50,7 @@ class CheckoutSolution:
                     num_offers = count // offer_quantity
                     total += num_offers * offer_price
                     count %= offer_quantity
-                total += prices[item] * count
+            total += prices[item] * count
 
         return total
 
@@ -58,6 +58,7 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("AAAAAAA"))
+
 
 
 

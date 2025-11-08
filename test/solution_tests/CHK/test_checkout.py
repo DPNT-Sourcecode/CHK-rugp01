@@ -15,6 +15,8 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout("ABCDABA") == 210
         assert market.checkout("AAAAA") == 200
+        assert market.checkout("AAAAAA") == 250
+        assert market.checkout("AAAAAAAA") == 330
 
     def test_invalid_items(self):
         market = CheckoutSolution()
@@ -26,5 +28,6 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout("EEB") == 80
         assert market.checkout("EEBB") == 110
+
 
 
