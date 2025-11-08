@@ -36,8 +36,10 @@ class CheckoutSolution:
         # apply special offers
         for item, rule in special_offers.items():
             if item in counts:
+                num_of_valid_offers = counts[item] // rule["buy_quantity"]
                 if rule["free_item"] in counts:
-                    counts[rule["free_item"]] -= rule['free_quantity']
+                    # Deduct free items from count
+                    counts[rule["free_item"]] = max(0, counts[rule["free_item"]] - num_of_valid_offers * rule["free_quantity"])
 
 
         total = 0
@@ -56,6 +58,7 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("C"))
+
 
 
 
