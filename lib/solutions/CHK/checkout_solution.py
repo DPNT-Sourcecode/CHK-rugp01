@@ -46,10 +46,10 @@ class CheckoutSolution:
         total = 0
         for item, count in counts.items():
             if item in offers:
-                offer_quantity, offer_price = offers[item]
-                offer_groups = count // offer_quantity
+                for offer_quantity, offer_price in offers[item]:
+                num_offers = count // offer_quantity
                 remainder = count % offer_quantity
-                total += offer_groups * offer_price + remainder * prices[item]
+                total += num_offers * offer_price + remainder * prices[item]
             else:
                 total += prices[item] * count
 
@@ -59,6 +59,7 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("AAAAAAA"))
+
 
 
 
