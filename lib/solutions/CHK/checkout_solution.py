@@ -17,7 +17,15 @@ class CheckoutSolution:
             'D': 15
         }
         offers = {
-            
+            'A':(3,130),
+            'B':(2,45),
         }
+
+        for item in skus:
+            if item not in prices:
+                return -1
+
+        
+
 
 
