@@ -77,6 +77,9 @@ class TestCheckout:
         assert market.checkout("XTX") == 45
         assert market.checkout("TYZ") == 45
         assert market.checkout("SSSXTX") == 90
+        assert market.checkout("STZZ") == 65
+        assert market.checkout("XXXY") == 65
+
 
 
 
