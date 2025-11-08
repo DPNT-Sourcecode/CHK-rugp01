@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class CheckoutSolution:
 
     # skus = unicode string
@@ -23,13 +26,14 @@ class CheckoutSolution:
         special_offers = {
             "E": {"buy_quantity": 2, "free_item": "B", "free_quantity": 1},
         }
+
         for item in skus:
             if item not in prices:
                 return -1
 
-        counts = dict()
-        for item in skus:
-            counts[item] = counts.get(item, 0) + 1
+        counts = Counter(skus)
+        # for item in skus:
+        #     counts[item] = counts.get(item, 0) + 1
 
         total = 0
         for item, count in counts.items():
@@ -47,3 +51,4 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("C"))
+
