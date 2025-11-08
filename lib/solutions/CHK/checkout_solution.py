@@ -38,3 +38,10 @@ class CheckoutSolution:
                 total += offer_groups*offer_price + remainder*prices[item]
             else:
                 total += offers[item] * count
+
+        return total
+
+if __name__ == '__main__':
+    market = CheckoutSolution()
+    print(market.checkout("AAAAAAA"))
+

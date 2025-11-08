@@ -1,5 +1,8 @@
 import pytest
-from lib.solutions.CHK import checkout_solution
+from lib.solutions.CHK.checkout_solution import CheckoutSolution
+
 
 def test_checkout():
-    assert checkout_solution("A") == 50
+    market = CheckoutSolution()
+    assert market.checkout("A") == 50
+
