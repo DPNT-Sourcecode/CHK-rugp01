@@ -13,6 +13,7 @@ class TestCheckout:
         assert market.checkout("B") == 30
         assert market.checkout("C") == 20
         assert market.checkout("D") == 15
+        assert market.checkout("E") == 40
 
     def test_mixed_items(self):
         market = CheckoutSolution()
@@ -23,5 +24,6 @@ class TestCheckout:
         assert market.checkout(float) == -1
         assert market.checkout(123) == -1
         assert market.checkout(["A", "B"]) == -1
+
 
 

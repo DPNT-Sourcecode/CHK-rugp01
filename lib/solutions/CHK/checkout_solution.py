@@ -12,11 +12,13 @@ class CheckoutSolution:
             'A': 50,
             'B': 30,
             'C': 20,
-            'D': 15
+            'D': 15,
+            'E': 40,
         }
         offers = {
             'A': (3, 130),
             'B': (2, 45),
+            'E': (2, )
         }
 
         for item in skus:
@@ -43,6 +45,7 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("C"))
+
 
 
 
