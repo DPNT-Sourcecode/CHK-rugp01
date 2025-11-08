@@ -66,6 +66,21 @@ class CheckoutSolution:
                     counts[free_item] = max(0, counts[free_item] - num_of_valid_offers * rule["free_quantity"])
 
         total = 0
+        # Apply group offers
+        for group in group_offers:
+            items = group['items']
+            group_size = group['group_size']
+            group_price = group['group_price']
+
+            # Gather all grouped offer items
+            group_items = []
+            for item in items:
+                group_items.extend([item] * counts[item])
+
+            # Sort price to maximise discount
+
+
+
         for item, count in counts.items():
             if item in offers:
                 for offer_quantity, offer_price in offers[item]:
@@ -80,4 +95,5 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("VV"))
+
 

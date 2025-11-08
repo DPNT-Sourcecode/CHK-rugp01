@@ -70,3 +70,8 @@ class TestCheckout:
         assert market.checkout("VV") == 90
         assert market.checkout("VVV") == 130
         assert market.checkout("VVVVV") == 220
+
+    def test_group_item_offers(self):
+        market = CheckoutSolution()
+        assert market.checkout("SSS") == 45
+
