@@ -36,6 +36,3 @@ class TestCheckout:
         assert market.checkout("FF") == 20
         assert market.checkout("FFFFFF") == 40
         assert market.checkout("FFFFFFF") == 50
-
-
-
