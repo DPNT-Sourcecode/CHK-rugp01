@@ -32,8 +32,10 @@ class CheckoutSolution:
                 return -1
 
         counts = Counter(skus)
-        # for item in skus:
-        #     counts[item] = counts.get(item, 0) + 1
+
+        # apply special offers
+        for item, rule in special_offers.items():
+            
 
         total = 0
         for item, count in counts.items():
@@ -51,4 +53,5 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("C"))
+
 
