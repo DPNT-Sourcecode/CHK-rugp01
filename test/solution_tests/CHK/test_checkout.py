@@ -82,8 +82,3 @@ class TestCheckout:
         assert market.checkout("XYZZ") == 62
         assert market.checkout("AAAXYZZ") == 192
 
-
-
-
-
-

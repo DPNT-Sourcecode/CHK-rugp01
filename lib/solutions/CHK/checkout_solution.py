@@ -103,6 +103,3 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("VV"))
-
-
-
