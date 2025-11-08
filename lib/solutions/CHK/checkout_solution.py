@@ -43,6 +43,7 @@ class CheckoutSolution:
             "F": {"buy_quantity": 3, "free_item": "F", "free_quantity": 1},
             "N": {"buy_quantity": 3, "free_item": "M", "free_quantity": 1},
             'R': {'buy_quantity': 3, "free_item": "Q", "free_quantity": 1},
+            'U': {'buy_quantity': 4, "free_item": "U", "free_quantity": 1},
         }
 
         for item in skus:
@@ -75,3 +76,4 @@ class CheckoutSolution:
 if __name__ == '__main__':
     market = CheckoutSolution()
     print(market.checkout("AAAAAAA"))
+
