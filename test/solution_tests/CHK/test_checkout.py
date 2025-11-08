@@ -23,6 +23,7 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout(float) == -1
         assert market.checkout(123) == -1
+        assert market.checkout("B11A") == -1
         assert market.checkout(["A", "B"]) == -1
 
     def test_E_offer(self):
