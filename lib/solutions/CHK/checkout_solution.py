@@ -25,7 +25,15 @@ class CheckoutSolution:
             if item not in prices:
                 return -1
 
-        
+        counts = dict()
+        for item in skus:
+            counts[item] = counts.get(item, 0) + 1
+
+        total = 0
+        for item, count in counts.items():
+            if item in offers:
+                
+
 
 
 
