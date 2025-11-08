@@ -28,6 +28,3 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout("EEB") == 80
         assert market.checkout("EEBB") == 110
-
-
-
