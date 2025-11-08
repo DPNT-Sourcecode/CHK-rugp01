@@ -2,10 +2,6 @@ import pytest
 from lib.solutions.CHK.checkout_solution import CheckoutSolution
 
 
-def test_checkout():
-    market = CheckoutSolution()
-    assert market.checkout("A") == 50
-
 class TestCheckout:
     def test_single_items(self):
         market = CheckoutSolution()
@@ -18,6 +14,7 @@ class TestCheckout:
     def test_mixed_items(self):
         market = CheckoutSolution()
         assert market.checkout("ABCDABA") == 210
+        assert market.checkout("AAAAA") == 200
 
     def test_invalid_items(self):
         market = CheckoutSolution()
@@ -29,4 +26,5 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout("EEB") == 80
         assert market.checkout("EEBB") == 110
+
 
