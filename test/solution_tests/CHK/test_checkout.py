@@ -24,3 +24,9 @@ class TestCheckout:
         assert market.checkout(float) == -1
         assert market.checkout(123) == -1
         assert market.checkout(["A", "B"]) == -1
+
+    def test_E_gives_B_free(self):
+        market = CheckoutSolution()
+        assert market.checkout("EEB") == 80
+        assert market.checkout("EEBB") == 110
+
