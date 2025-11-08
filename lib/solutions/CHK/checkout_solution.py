@@ -2,10 +2,10 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus: str) -> int:
+        if not isinstance(skus, str):
+            return -1
 
         if not all(ch.isalpha() for ch in skus):
-            return -1
-        if skus == None:
             return -1
 
         prices = {
@@ -15,8 +15,8 @@ class CheckoutSolution:
             'D': 15
         }
         offers = {
-            'A':(3,130),
-            'B':(2,45),
+            'A': (3, 130),
+            'B': (2, 45),
         }
 
         for item in skus:
@@ -33,13 +33,15 @@ class CheckoutSolution:
                 offer_quantity, offer_price = offers[item]
                 offer_groups = count // offer_quantity
                 remainder = count % offer_quantity
-                total += offer_groups*offer_price + remainder*prices[item]
+                total += offer_groups * offer_price + remainder * prices[item]
             else:
                 total += prices[item] * count
 
         return total
 
+
 if __name__ == '__main__':
     market = CheckoutSolution()
-    print(market.checkout(""))
+    print(market.checkout("AABBACCA"))
+
 
