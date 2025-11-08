@@ -36,3 +36,11 @@ class TestCheckout:
         assert market.checkout("FF") == 20
         assert market.checkout("FFFFFF") == 40
         assert market.checkout("FFFFFFF") == 50
+
+    def test_H_offer(self):
+        market = CheckoutSolution()
+        assert market.checkout("HHHHH") == 45
+        assert market.checkout("HHHHHHHHHH") == 80
+        assert market.checkout("HHHHHHHHHHH") == 90
+
+
