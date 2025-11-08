@@ -18,4 +18,5 @@ class TestCheckout:
         market = CheckoutSolution()
         assert market.checkout(None) == -1
         assert market.checkout(123) == -1
+        assert market.checkout(["A", "B"]) == -1
 

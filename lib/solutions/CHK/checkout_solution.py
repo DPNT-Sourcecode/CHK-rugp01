@@ -2,12 +2,10 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus: str) -> int:
-        # Rules
-        # A = 50, 3A = 130
-        # B = 30, 2B = 45
-        # C = 20, D = 15
 
         if not all(ch.isalpha() for ch in skus):
+            return -1
+        if skus == None:
             return -1
 
         prices = {
@@ -37,7 +35,7 @@ class CheckoutSolution:
                 remainder = count % offer_quantity
                 total += offer_groups*offer_price + remainder*prices[item]
             else:
-                total += offers[item] * count
+                total += prices[item] * count
 
         return total
 
