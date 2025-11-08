@@ -19,8 +19,8 @@ class CheckoutSolution:
             'E': 40,
         }
         offers = {
-            'A': (3, 130),
-            'B': (2, 45),
+            'A': [(5, 200),(3, 130)],
+            'B': [(2, 45)],
         }
 
         special_offers = {
@@ -58,7 +58,8 @@ class CheckoutSolution:
 
 if __name__ == '__main__':
     market = CheckoutSolution()
-    print(market.checkout("C"))
+    print(market.checkout("AAAAAAA"))
+
 
 
 
